@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<script src="js/socket.io.js"></script>
+		<script>
+  			const socket = io('http://192.168.0.199:31074');
+		</script>
+		<title>Detector de Palabra</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/principal.css" rel="stylesheet">
+		<style >
+			@media only screen and (min-width: 768px){
+				#otro{
+					width: 10%;
+				}
+				#led1{
+					height: 75%;
+					width: 50%;
+				}
+				#led2{
+					height: 75%;
+					width: 50%;
+				}
+				#heat{
+					height: 75%;
+					width: 50%;
+				}
+			}
+			@media only screen and (max-width: 767px){
+				#otro{
+					width: 10%;
+				}
+				#led1{
+					height: 75%;
+					width: 50%;
+				}
+				#led2{
+					height: 75%;
+					width: 50%;
+				}
+			}
+			@media only screen and (min-width: 993px){
+				#otro{
+					width: 15%;
+				}
+				#led1{
+					height: 75%;
+					width: 50%;
+				}
+				#led2{
+					height: 75%;
+					width: 50%;
+				}
+				#heat{
+					height: 75%;
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Image and text -->
+
+		<div id="principal">
+		<h2> Detector de Palabras </h2>
+			<img src="img/focoOff.png" height="200" width="160">
+			<button onclick="grabar()">Grabar</button>
+		<button onclick="parar()">Verificar</button>
+		<!--<button onclick="descargar()">Verificar</button>-->
+		<h3> Grabe un audio diciendo "prender" o "apagar".</br> Tras hacerlo, presione verificar y vea la magia suceder. </h3>
+		<h1 id="result"></h1>
+		</div>
+
+
+
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/mqtt.js"></script>
+		<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+		<script src="js/audio.js"></script>
+		<script src="js/FileSaver.js"></script>
+	</body>
+</html>
